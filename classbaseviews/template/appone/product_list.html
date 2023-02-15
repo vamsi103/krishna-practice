@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Product_Details</h2>
+    <table border="3">
+      <thead>
+        <th>Id</th>
+        <th>BrandName</th>
+        <th>BrandModel</th>
+        <th>Brandcost</th>
+      </thead>
+      {% for k in Product_list %}
+      <tr>
+        <td><a href="/{{k.id}}">{{k.id}}</a></td>
+        <td>{{k.ProductBrandName}}</td>
+        <td>{{k.ProductBrandModel}}</td>
+        <td>{{k.ProductBrandPrice}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br/><br/>
+    <a href="/create">ADD Product</a>
+
+
+  </body>
+</html>
